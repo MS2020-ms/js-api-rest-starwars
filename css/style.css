@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fuentePrincipal: 'Orbitron', sans-serif;
+    --colorPrincipal: black;
+    --colorSecundario: #ffe919;
+}
+body{
+    font-family: var(--fuentePrincipal);
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.wrapper{
+    display: flex;
+}
+ul{
+   list-style: none; 
+}
+
+/*Inicio de Header*/
+
+header{
+    max-width: 425px;
+    background-color: var(--colorPrincipal);
+    padding: 20px;
+    height: 100vh;
+}
+header .logo{
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+header #personajes li{
+    cursor: pointer;
+    color: white;
+    font-size: 100%;
+    font-weight: 700;
+    padding: 10px;
+}
+header #personajes li:hover, header .botones div:hover{
+    color: var(--colorPrincipal);
+    background-color: var(--colorSecundario);
+}
+header .botones{
+    display: flex;
+}
+header .botones div{
+    width: 100%;
+    margin: 0 2%;
+    border: 1px solid var(--colorSecundario);
+    color: var(--colorSecundario);
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/*Fin de Header*/
+
+/*Inicio de main*/
+
+main{
+    padding: 20px;
+    width: 80vw;
+}
+main #vistaPersonaje{
+    padding: 20px;
+    border: 1px solid var(--colorPrincipal);
+    width: 100%;
+}
+main h2{
+    margin: 20px 0;
+    text-decoration: underline;
+}
+main #vistaPersonaje #peliculas{
+    display: flex;
+    flex-wrap: wrap;
+}
+main #vistaPersonaje #peliculas article{
+    width: 28%;
+    background-color: var(--colorPrincipal);
+    color: white;
+    padding: 20px;
+    margin: 1%;
+    border: 2px solid var(--colorSecundario);
+}
+main #vistaPersonaje #peliculas article h3{
+    color: var(--colorSecundario);
+}
+
+@media(max-width: 900px)
+{
+.wrapper{
+    flex-wrap: wrap;
+}
+header{
+    max-width: 900px;
+    height: auto;
+}
+main{
+    width: 100vw;
+}
+main #vistaPersonaje{
+    width: auto;
+    height: auto;
+}
+main #vistaPersonaje #peliculas article{
+    width: 98%;
+}
+}
+
+/*Fin de main*/
+
